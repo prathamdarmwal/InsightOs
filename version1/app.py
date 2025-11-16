@@ -23,7 +23,11 @@ def get_system_info():
     Processor: {uname.processor}
     """
     gpus = GPUtil.getGPUs()
+
+
+
     if gpus:
+
         for gpu in gpus:
             info += f"\nGPU: {gpu.name} | Total Memory: {gpu.memoryTotal}MB"
     else:
